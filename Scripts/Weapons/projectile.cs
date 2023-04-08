@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class projectile : MonoBehaviour {
     public float speed;
+    public int Damage = 3;
     [SerializeField] private float LifeTime;
     [SerializeField] private GameObject particalEffect;
 
@@ -16,5 +17,15 @@ public class projectile : MonoBehaviour {
     private void DestroyProjectile() {
         Instantiate(particalEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D hitInfo) {
+        Enemy enemy = hitInfo.GetComponent<Enemy>();
+
+        if (enemy != null) {
+            enemy.TakeDamge(Damage);
+        }
+
+        DestroyProjectile();
     }
 }

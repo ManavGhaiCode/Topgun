@@ -147,5 +147,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  LifeTime: 1.2
+  LifeTime: 0.5
   particalEffect: {fileID: 5943255040742728513, guid: b326f21317edfb65d94ecad98ea07b3f, type: 3}
