@@ -3,9 +3,12 @@ using UnityEngine;
 public class Enemy : MonoBehaviour {
     public int health;
     public float speed;
+    public float attckTime;
+    public float TimeBetweenAttcks;
 
-    [HideInInspector]
-    public Transform playerPosition;
+    [HideInInspector] public Transform playerPosition;
+
+
 
     private void Start() {
         playerPosition = GameObject.FindGameObjectWithTag("Player").transform;

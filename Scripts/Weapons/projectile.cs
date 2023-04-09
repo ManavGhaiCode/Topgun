@@ -24,8 +24,7 @@ public class projectile : MonoBehaviour {
 
         if (enemy != null) {
             enemy.TakeDamge(Damage);
+            DestroyProjectile();
         }
-
-        DestroyProjectile();
     }
 }

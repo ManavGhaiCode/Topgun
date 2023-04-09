@@ -4,6 +4,7 @@ public class PlayerController : MonoBehaviour {
     public float speed;
 
     [SerializeField] private KeyBindings KeyBinds;
+    [SerializeField] private float health;
 
     private Rigidbody2D rb;
     private Vector2 moveInput;
@@ -53,5 +54,9 @@ public class PlayerController : MonoBehaviour {
         }
         
         return 0;
+    }
+
+    public void TakeDamge (int Damage) {
+        health -= Damage;
     }
 }
